@@ -1,0 +1,24 @@
+[project]
+name = "curso01-langgraph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.121.2",
+    "langchain>=1.0.5",
+    "langchain-anthropic>=1.0.3",
+    "langchain-openai>=1.0.2",
+    "langgraph>=1.0.3",
+]
+
+[dependency-groups]
+dev = [
+    "grandalf>=0.8",
+    "ipykernel>=7.1.0",
+    "langgraph-cli[inmem]>=0.4.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
