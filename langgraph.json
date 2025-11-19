@@ -3,7 +3,9 @@
     "graphs": {
         "agent": "./src/agents/main.py:agent",
         "simple": "./src/agents/simple.py:agent",
-        "rag": "./src/agents/rag.py:agent"
+        "rag": "./src/agents/rag.py:agent",
+        "support": "./src/agents/support/agent.py:agent",
+        "booking": "./src/agents/support/nodes_support/booking/node.py:booking_node"
     },
     "env": ".env"
 }
