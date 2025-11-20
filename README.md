@@ -161,6 +161,18 @@ agent = builder.compile()
 
 ### Fast API Checkpoint
 
+#comando para correr FastAPI
+uv run fastapi dev ./src/api/main.py
+
+#Instalación de DB - langgraph-checkpoint-postgres 3.0.1
+uv add langgraph-checkpoint-postgres
+
+#Docker para crear una base de datos Postgres
+docker-compose.yml
+
+#crear el contenedor con 
+docker compose up -d
+
 <details>
 <summary>Template</summary>
 

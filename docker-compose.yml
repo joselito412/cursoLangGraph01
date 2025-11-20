@@ -1,0 +1,30 @@
+services:
+  # Servicio de Base de Datos (Postgres)
+  db:
+    image: postgres:16-alpine # Versión ligera y estable
+    container_name: langgraph_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password # ¡Cambia esto en producción!
+      POSTGRES_DB: langgraph_db # El nombre de tu base de datos
+    ports:
+      - "5433:5432" # Puerto externo : Puerto interno
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persistencia de datos
+
+  # Interfaz Gráfica para administrar la BD (Opcional pero recomendada)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: langgraph_pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80" # Accederás vía http://localhost:5050
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

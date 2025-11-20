@@ -4,8 +4,11 @@
         "agent": "./src/agents/main.py:agent",
         "simple": "./src/agents/simple.py:agent",
         "rag": "./src/agents/rag.py:agent",
-        "support": "./src/agents/support/agent.py:agent",
-        "booking": "./src/agents/support/nodes_support/booking/node.py:booking_node"
+        "support": "./src/agents/support/agent.py:make_graph",
+        "booking": "./src/agents/support/nodes_support/booking/node.py:booking_node",
+        "code_review": "./src/agents/code_review/main.py:agent",
+        "orchestrator": "./src/agents/orchestrator/main.py:agent",
+        "evaluator": "./src/agents/evaluator/main.py:agent"
     },
     "env": ".env"
 }
